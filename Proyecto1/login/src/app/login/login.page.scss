@@ -1,0 +1,21 @@
+.center-horizontal {
+    padding-top: 30vh;
+    /*padding-left: 20vw;
+    padding-right: 20vw;*/
+    display: flex; /* Usar flexbox para centrar el contenido */
+    flex-direction: column; /* Alinear en columna */
+    //align-items: center; /* Centra verticalmente */
+    /* justify-content: center; */ /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    width: 100vw; /* Ancho completo de la ventana */
+    position: absolute; /* Posición absoluta para centrar en la pantalla */
+  }
+
+  .msg-error {
+    color: red;
+    font-size: 0.8em;
+    margin: 10px;
+    text-align: center;
+    font-size: medium;
+    position: relative;
+  }

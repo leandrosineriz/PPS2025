@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>PPS - P1</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,15 +14,18 @@
 -->
 
 <ion-content>
-  <form (ngSubmit)="onSubmit()">
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
-    </ion-item>
-    <ion-button expand="full" type="submit">Login</ion-button>
-  </form>
+  <div class="center-horizontal">
+    <ion-label class="msg-error" *ngIf="showContent">Error de usuario o contraseña</ion-label>
+    <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+        <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="user" name="user" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
+      <ion-button expand="full" type="submit">Ingresar</ion-button>
+    </form>
+  </div>  
 </ion-content>
