@@ -38,22 +38,21 @@ export class AuthService {
       console.log("Login correcto");
       return await true;
     }
-    
-
   }
 
   register() {}
 
   resetPassword() {}
 
-  logout() {
-    
-  }
-
+  logout() {}
 
   // Método para guardar datos
   async setItem(key: string, value: any): Promise<void> {
-    await this.storage?.set(key, value);
+    console.log("Guardando datos en el almacenamiento local...");
+    this.storage = await this.storageService.create();
+    console.log(value);
+    //this.clear();
+    console.log(await this.storage?.set(key, value));
     console.log(`Item con clave ${key} almacenado.`);
   }
 

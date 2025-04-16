@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../services/auth/auth.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,7 +8,15 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class Tab1Page {
+  texto1: string = "";
+  usuarioDatos: any;
 
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
+  async ngOnInit() {
+    console.log("Ingreso a Tab1");
+    this.usuarioDatos = await this.authService.getItem('uid');
+    console.log(this.usuarioDatos.session.user.email);
+    this.texto1 = this.usuarioDatos.session.user.email;
+  }
 }
