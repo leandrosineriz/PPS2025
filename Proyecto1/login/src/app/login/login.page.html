@@ -27,11 +27,12 @@
       </ion-item>
       <ion-button expand="full" type="submit">Ingresar</ion-button>
     </form>
-  </div>  
+  </div> 
+  
+  <div>
+    <ion-button expand="full" type="ion-button" (click)="loginVisitante()">Visitante</ion-button>
+    <ion-button expand="full" type="ion-button" (click)="loginUsuario()">Usuario</ion-button>
+    <ion-button expand="full" type="ion-button" (click)="loginAdmin()">Administrador</ion-button>
+  </div> 
 </ion-content>
 
-<div>
-  <ion-button expand="full" type="ion-button" (click)="loginVisitante()">Visitante</ion-button>
-  <ion-button expand="full" type="ion-button" (click)="loginUsuario()">Usuario</ion-button>
-  <ion-button expand="full" type="ion-button" (click)="loginAdmin()">Administrador</ion-button>
-</div>
