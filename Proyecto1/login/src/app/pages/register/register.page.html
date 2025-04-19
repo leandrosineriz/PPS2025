@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="center-horizontal">
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+      <ion-item>
+        <ion-label position="stacked">Correo</ion-label>
+        <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input [type]="passwordType" [(ngModel)]="password" name="password" required></ion-input>
+        <ion-icon slot="end" [name]="passwordIcon" (click)="togglePasswordVisibility()" style="cursor: pointer;"></ion-icon>
+      </ion-item>
+      <ion-button expand="full" type="submit" color="warning" [disabled]="isButtonDisabled"><strong>Registrarse</strong></ion-button>
+    </form>
+    <p *ngIf="emailError" style="color: red;">{{ emailError }}</p>
+    <p *ngIf="passwordError" style="color: red;">{{ passwordError }}</p>
+    <div class="text-alert-correcto"><p *ngIf="registerCorrect" style="color: rgb(0, 218, 0);" >{{ registerCorrect }}</p></div>
+  </div>
+</ion-content>
+
+

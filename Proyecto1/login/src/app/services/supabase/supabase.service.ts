@@ -27,7 +27,7 @@ export class SupabaseService {
   }
   
   // Cambia el nombre de la función a register para mayor claridad
-  register(email: string, password: string) { 
+  async register(email: string, password: string) { 
     return supabase.auth.signUp({ email, password })
       .then(({ data, error }) => {
         if (error) throw error;
@@ -38,6 +38,7 @@ export class SupabaseService {
         throw err;
       });
   }
+
   logout() {
     return supabase.auth.signOut()
       .then(({ error }) => {
@@ -49,6 +50,7 @@ export class SupabaseService {
         throw err;
       });
   }
+
   getUser() {
     return supabase.auth.getUser()
       .then(({ data, error }) => {

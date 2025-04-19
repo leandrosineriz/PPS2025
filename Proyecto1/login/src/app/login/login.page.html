@@ -18,21 +18,25 @@
     <ion-label class="msg-error" *ngIf="showContent">Error de usuario o contraseña</ion-label>
     <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
         <ion-item>
-        <ion-label position="floating">Usuario</ion-label>
+        <ion-label position="stacked">Correo</ion-label>
         <ion-input type="text" [(ngModel)]="user" name="user" required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input type="password" [type]="passwordType" [(ngModel)]="password" name="password" required></ion-input>
+        <ion-icon slot="end" [name]="passwordIcon" (click)="togglePasswordVisibility()" style="cursor: pointer;"></ion-icon>
       </ion-item>
-      <ion-button expand="full" type="submit">Ingresar</ion-button>
+      <ion-button expand="full" color="success" type="submit"><strong class="text-login">Ingresar</strong></ion-button>
     </form>
+    <div class="container-registrarse">
+      <a class="text-registrarse" href="/register">Registrarse</a>
+    </div>
   </div> 
   
-  <div>
-    <ion-button expand="full" type="ion-button" (click)="loginVisitante()">Visitante</ion-button>
-    <ion-button expand="full" type="ion-button" (click)="loginUsuario()">Usuario</ion-button>
-    <ion-button expand="full" type="ion-button" (click)="loginAdmin()">Administrador</ion-button>
+  <div class="bottom-container-users">
+    <ion-button shape="round" color="medium" expand="block" type="ion-button" (click)="loginVisitante()" ><strong class="button-user">Visitante</strong></ion-button>
+    <ion-button shape="round" color="medium" expand="block" type="ion-button" (click)="loginUsuario()" ><strong class="button-user">Usuario</strong></ion-button>
+    <ion-button shape="round" color="medium" expand="block" type="ion-button" (click)="loginAdmin()" ><strong class="button-user">Administrador</strong></ion-button>
   </div> 
 </ion-content>
 

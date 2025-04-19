@@ -1,0 +1,31 @@
+.text-login {
+    font-size: medium;
+}
+
+.container-form {
+    display: flex;  
+    padding-top: 30vh;
+    position: relative;
+    flex-direction: column;
+    justify-content:center;
+}
+
+.center-horizontal {
+    padding-top: 30vh;
+    display: flex; /* Usar flexbox para centrar el contenido */
+    flex-direction: column; /* Alinear en columna */
+    //align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    width: 100vw; /* Ancho completo de la ventana */
+    //position: absolute; /* Posición absoluta para centrar en la pantalla */
+}
+
+.text-alert-correcto {
+    display: flex; /* Usar flexbox para centrar el contenido */
+    flex-direction: column; /* Alinear en columna */
+    align-items: center;
+}
+
+p {
+    padding-top: 3vh;
+}

@@ -1,21 +1,54 @@
-.center-horizontal {
-    padding-top: 30vh;
-    /*padding-left: 20vw;
-    padding-right: 20vw;*/
-    display: flex; /* Usar flexbox para centrar el contenido */
-    flex-direction: column; /* Alinear en columna */
-    //align-items: center; /* Centra verticalmente */
-    /* justify-content: center; */ /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    width: 100vw; /* Ancho completo de la ventana */
-    position: absolute; /* Posición absoluta para centrar en la pantalla */
-  }
+.button-user {
+  color: rgb(22, 22, 22);
+}
 
-  .msg-error {
-    color: red;
-    font-size: 0.8em;
-    margin: 10px;
-    text-align: center;
-    font-size: medium;
-    position: relative;
-  }
+.text-login {
+  font-size: medium;
+}
+
+.center-horizontal {
+  padding-top: 30vh;
+  /*padding-left: 20vw;
+  padding-right: 20vw;*/
+  display: flex; /* Usar flexbox para centrar el contenido */
+  flex-direction: column; /* Alinear en columna */
+  //align-items: center; /* Centra verticalmente */
+  /* justify-content: center; */ /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  width: 100vw; /* Ancho completo de la ventana */
+  position: absolute; /* Posición absoluta para centrar en la pantalla */
+}
+
+.msg-error {
+  color: red;
+  font-size: 0.8em;
+  margin: 10px;
+  text-align: center;
+  font-size: medium;
+  position: relative;
+}
+
+.bottom-container-users{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  height: 100%;
+}
+
+.container-registrarse {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  flex-direction: column; /* Alinear en columna */
+  position: relative; /* Posición absoluta para centrar en la pantalla */
+}
+
+.text-registrarse {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding-top: 3vh;
+}
+
+a:hover {
+  color: rgb(81, 171, 255);
+}
+  

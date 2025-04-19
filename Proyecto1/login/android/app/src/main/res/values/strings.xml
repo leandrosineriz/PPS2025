@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">login</string>
-    <string name="title_activity_main">login</string>
+    <string name="app_name">PPS-1</string>
+    <string name="title_activity_main">PPS-1</string>
     <string name="package_name">pps.login.app</string>
     <string name="custom_url_scheme">pps.login.app</string>
 </resources>
